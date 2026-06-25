@@ -3,7 +3,7 @@
 **Data Scientist · MSc student in Computer Science for Data Science — Université Paris-Saclay**
 
 📧 jewin.cheng@gmail.com · 📱 +33 7 82 91 25 67
-🔗 [LinkedIn](http://www.linkedin.com/in/chgjewin-lkd) · [GitHub](https://github.com/jewinc)
+🔗 [LinkedIn](http://www.linkedin.com/in/jewin-cheng) · [GitHub](https://github.com/jewinc)
 
 > *This document is my master CV: an exhaustive record of my background, experience and projects. Job applications are based on targeted resumes derived from this document.*
 
@@ -11,7 +11,7 @@
 
 ## 🎯 Profile
 
-Final-year Master's student in Computer Science for Data Science (Paris-Saclay), with two years of professional experience as a Data Scientist apprentice at Malakoff Humanis. Skilled in NLP, computer vision, MLOps and modern AI systems (LLMs, RAG, agentic systems). Also interested in programming languages, operations research and computer security.
+AI / ML Engineer in the final year of an MSc in Computer Science for Data Science (Paris-Saclay), with two years of experience building and deploying production AI systems as a Data Scientist at Malakoff Humanis. Specialises in making unstructured data usable — NLP, computer vision, MLOps and modern AI systems (LLMs, RAG, agentic systems, fine-tuning, prompt engineering, LLM evaluation). Comfortable bridging technical delivery and business needs. Also interested in programming languages, operations research and computer security.
 
 ---
 
@@ -123,11 +123,11 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 **Data Science & ML:** PyTorch · scikit-learn · Transformers (BERT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
 
-**LLM / Agentic:** LangChain · LangGraph · Snowflake Cortex (Agent, Search, REST API) · RAG · multi-agent systems.
+**LLM / Agentic:** LangChain · LangGraph · RAG · multi-agent systems · prompt engineering · fine-tuning · LLM evaluation (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API).
 
-**Data Engineering & Platforms:** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · OLAP SQL · Tableau.
+**Data Engineering & Platforms:** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · ETL pipelines · OLAP SQL · Tableau.
 
-**MLOps & DevOps:** MLflow · Docker · Kubernetes · Git / GitHub / GitLab · Linux.
+**MLOps & DevOps:** MLflow · Docker · Kubernetes · CI/CD · Git / GitHub / GitLab · Linux.
 
 **Methodologies:** Agile · MLOps · Waterfall · MVC.
 

@@ -3,7 +3,7 @@
 **Data Scientist · Étudiant en Master Informatique pour la Science des Données — Université Paris-Saclay**
 
 📧 jewin.cheng@gmail.com · 📱 +33 7 82 91 25 67
-🔗 [LinkedIn](http://www.linkedin.com/in/chgjewin-lkd) · [GitHub](https://github.com/jewinc)
+🔗 [LinkedIn](http://www.linkedin.com/in/jewin-cheng) · [GitHub](https://github.com/jewinc)
 
 > *Ce document est mon CV maître : un enregistrement exhaustif de mon parcours, de mes expériences et de mes projets. Les candidatures s'appuient sur des CV ciblés dérivés de ce document.*
 
@@ -11,7 +11,7 @@
 
 ## 🎯 Profil
 
-Étudiant en dernière année de Master Informatique pour la Science des Données (Paris-Saclay), avec deux ans d'expérience professionnelle en tant que Data Scientist en alternance chez Malakoff Humanis. Compétent en NLP, vision par ordinateur, MLOps et systèmes d'IA modernes (LLM, RAG, systèmes agentiques). Également intéressé par les langages de programmation, la recherche opérationnelle et la sécurité informatique.
+Ingénieur IA / ML en dernière année de Master Informatique pour la Science des Données (Paris-Saclay), avec deux ans d'expérience à concevoir et déployer des systèmes d'IA en production en tant que Data Scientist chez Malakoff Humanis. Spécialité : rendre exploitables des données peu structurées — NLP, vision par ordinateur, MLOps et systèmes d'IA modernes (LLM, RAG, systèmes agentiques, fine-tuning, prompt engineering, évaluation LLM). À l'aise pour relier livraison technique et besoins métier. Également intéressé par les langages de programmation, la recherche opérationnelle et la sécurité informatique.
 
 ---
 
@@ -123,11 +123,11 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 
 **Data Science & ML :** PyTorch · scikit-learn · Transformers (BERT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
 
-**LLM / Agentique :** LangChain · LangGraph · Snowflake Cortex (Agent, Search, REST API) · RAG · systèmes multi-agents.
+**LLM / Agentique :** LangChain · LangGraph · RAG · systèmes multi-agents · prompt engineering · fine-tuning · évaluation LLM (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API).
 
-**Data Engineering & Plateformes :** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · OLAP SQL · Tableau.
+**Data Engineering & Plateformes :** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · pipelines ETL · OLAP SQL · Tableau.
 
-**MLOps & DevOps :** MLflow · Docker · Kubernetes · Git / GitHub / GitLab · Linux.
+**MLOps & DevOps :** MLflow · Docker · Kubernetes · CI/CD · Git / GitHub / GitLab · Linux.
 
 **Méthodologies :** Agile · MLOps · Cascade · MVC.
 

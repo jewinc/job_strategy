@@ -17,7 +17,7 @@ You are working on a **single profile**: the one described in the **CANDIDATE CO
 - **Location:** Palaiseau, Île-de-France (open to anywhere in France; **remote preferred**)
 - **Email:** jewin.cheng@gmail.com
 - **GitHub:** github.com/jewinc
-- **Current LinkedIn URL:** linkedin.com/in/chgjewin-lkd *(awkward — recommend cleaning to a vanity URL like `/in/jewin-cheng`)*
+- **Current LinkedIn URL:** linkedin.com/in/jewin-cheng *(awkward — recommend cleaning to a vanity URL like `/in/jewin-cheng`)*
 - **Native languages:** French (native), Mandarin Chinese (native)
 - **Other languages:** English — TOEIC 925/990, Linguaskill 177/180, EUGLOH program participant
 

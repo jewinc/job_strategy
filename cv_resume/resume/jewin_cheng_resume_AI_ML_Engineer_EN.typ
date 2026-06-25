@@ -6,7 +6,7 @@
 
 #set page(
   paper: "a4",
-  margin: (top: 14mm, bottom: 14mm, left: 20mm, right: 20mm),
+  margin: (top: 12mm, bottom: 12mm, left: 20mm, right: 20mm),
 )
 #set text(
   font: ("Times New Roman", "Liberation Serif", "Times"),
@@ -40,7 +40,7 @@
   for b in bullets {
     pad(left: 5mm, par[• #b])
   }
-  v(5pt)
+  v(3pt)
 }
 
 #let project(title, sub: none, bullets: ()) = {
@@ -67,14 +67,14 @@
   #v(2pt)
   #text(size: 22pt)[Jewin Cheng] \
   #v(1pt)
-  #text(size: 10pt)[+33 7 82 91 25 67 #h(4pt) | #h(4pt) #link("mailto:jewin.cheng@gmail.com")[jewin.cheng\@gmail.com] #h(4pt) | #h(4pt) #link("https://linkedin.com/in/chgjewin-lkd")[linkedin.com/in/chgjewin-lkd] #h(4pt) | #h(4pt) #link("https://github.com/jewinc?tab=repositories")[github.com/jewinc]]
+  #text(size: 10pt)[+33 7 82 91 25 67 #h(4pt) | #h(4pt) #link("mailto:jewin.cheng@gmail.com")[jewin.cheng\@gmail.com] #h(4pt) | #h(4pt) #link("https://linkedin.com/in/jewin-cheng")[linkedin.com/in/jewin-cheng] #h(4pt) | #h(4pt) #link("https://github.com/jewinc?tab=repositories")[github.com/jewinc]]
 ]
 
 // ─── profile ─────────────────────────────────────────────────────────────
 
 #section("Profile")
 
-#text(weight: "bold")[Final-year MSc with 2 years of hands-on Data Science experience at Malakoff Humanis. Specialises in *LLMs*, *RAG* and *agentic systems*, with end-to-end production experience in *NLP*, *computer vision* and *MLOps*. Seeking a CDI as an AI / ML Engineer at a growth-focused scale-up.]
+#text(weight: "bold")[AI / ML Engineer with 2 years of experience building and deploying production AI systems at Malakoff Humanis. I make unstructured data usable — *LLMs*, *RAG*, *agentic systems* — with end-to-end ownership across *NLP*, *computer vision* and *MLOps*. Comfortable bridging technical delivery and business needs. Seeking a CDI as an AI / ML Engineer.]
 
 // ─── professional experience ─────────────────────────────────────────────
 
@@ -95,7 +95,7 @@
 #entry(
   "Formal Methods Laboratory (LMF) — Université Paris-Saclay",
   "Orsay, France",
-  "Research Intern (paid, solo)",
+  "Research Intern",
   "Jun 2024 – Aug 2024",
   bullets: (
     [Studied *Monero zero-knowledge proofs* and built a *transaction-path visualization tool* using a public contaminated-transaction dataset; presented findings to the academic supervisor and a cyber police officer.],
@@ -142,9 +142,9 @@
 
 #project(
   "RAG Nutrition Assistant",
-  sub: "MSc course project — sub-team lead (~25 students) — 2025",
+  sub: "MSc course project — team lead (5 people) — 2025",
   bullets: (
-    [Led the *feature-design sub-team* (nutri-score computation, ingredient substitution, recipe rewriting) and coordinated with other sub-team leads; delivered a chatbot web application in 2 months.],
+    [Led a *team of 5* on feature design (nutri-score computation, ingredient substitution, recipe rewriting) and coordinated with the project's other team leads; delivered a chatbot web application in 2 months.],
   ),
 )
 
@@ -153,9 +153,9 @@
 #section("Skills")
 
 #skill-line("Programming", "Python, SQL, Java, OCaml, Rust, JavaScript / Node.js, C / C++")
-#skill-line("AI / ML", "PyTorch, scikit-learn, Transformers (BERT), spaCy, scispaCy, NLTK, PyMuPDF, NumPy, Pandas")
-#skill-line("LLM / Agentic", "LangChain, LangGraph, Snowflake Cortex (Agent, Search, REST API), RAG, multi-agent systems")
-#skill-line("Data / MLOps", "MLflow, Docker, Kubernetes, Airflow, Spark, HDFS, Snowflake, AWS S3, Dataiku")
+#skill-line("AI / ML", "PyTorch, scikit-learn, Transformers (BERT), NER, computer vision, spaCy, NLTK, PyMuPDF, NumPy, Pandas")
+#skill-line("LLM / Agentic", "LangChain, LangGraph, RAG, multi-agent systems, prompt engineering, fine-tuning, LLM evaluation (faithfulness / groundedness), Snowflake Cortex (Agent, Search, REST API)")
+#skill-line("Data / MLOps", "MLflow, Docker, Kubernetes, CI/CD, Airflow, Spark, ETL pipelines, Snowflake, AWS S3, Dataiku")
 #skill-line("Tools", "Git / GitHub / GitLab, Linux, JupyterLab, Visual Studio Code, IntelliJ IDEA, Tableau")
 #skill-line("Certifications", "Dataiku Core Designer; Dataiku ML Practitioner")
 #skill-line("Languages", "French (native); Mandarin Chinese (native); English (TOEIC 925/990, Linguaskill 177/180, EUGLOH program)")

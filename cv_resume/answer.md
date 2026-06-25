@@ -132,7 +132,7 @@ Do you have any — AWS, GCP, Azure, Snowflake, Dataiku, Coursera/DeepLearning.A
 **Q26. Header details for the CV:**
 - Which city are you currently based in (for the header)? I'm currently based in Palaiseau near Paris.
 - Photo: include or skip? (Optional in France; more common in traditional sectors, less common in tech.) skip
-- LinkedIn URL — confirm `linkedin.com/in/chgjewin-lkd` is the canonical one or do you have a cleaner vanity URL? it is the canonical, I can build another one if needed.
+- LinkedIn URL — confirm `linkedin.com/in/jewin-cheng` is the canonical one or do you have a cleaner vanity URL? it is the canonical, I can build another one if needed.
 - Portfolio URL beyond GitHub — do you want the TUMO Drive link in the CV, or only the master CV? only on the master CV.
 
 **Q27. Professional summary positioning:**
