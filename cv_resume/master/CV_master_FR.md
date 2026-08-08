@@ -22,11 +22,12 @@ Ingénieur IA / ML en dernière année de Master Informatique pour la Science de
 
 Membre de l'équipe Data Science au sein de la direction MH Tech, en environnement Agile. Conception et livraison de modèles ML / NLP / Vision par Ordinateur sur des cas d'usage métier de traitement documentaire, de l'exploration à l'industrialisation en batch.
 
+- Pilotage de la partie ingestion d'un **service RAG** alimentant un **chatbot assistant RH interne** : intégration dans le service d'un script de scraping jusque-là lancé à la main (`requests` / BeautifulSoup sur ~180 articles HTML internes → ~1 000 chunks générés par LLM), rendant toute la chaîne **scraping → chunking → indexation** autonome sous forme de job conteneurisé en production. Ajout d'une **ré-ingestion incrémentale par hachage de contenu** sur toutes les étapes, faisant passer une ré-indexation complète de tous les articles de ~2 heures à quelques minutes ; correction d'un **bug de troncature silencieuse du LLM** qui faisait disparaître du contenu d'article (reprise du prompt + changement de modèle). **AWS OpenSearch** en recherche hybride (BM25 + k-NN approximatif), **AWS S3** pour le HTML brut / images / pièces jointes / chunks, appels LLM via un proxy **LiteLLM** (Cohere embed-large, GPT-5.1), tests et couverture contrôlés par une pipeline CI **Jenkins** qui construit et pousse l'image sur un ECR Docker interne. *(Mai 2026 – en cours ; déploiement Airflow réalisé par le Tech Lead.)*
 - Conception et déploiement (en batch) d'un **modèle de classification ML** (85 % de précision) suivant les bonnes pratiques **MLOps**, qualifiant un million de documents contractuels clients et débloquant un stock accumulé depuis plusieurs années pour les gestionnaires de contrats.
 - Ajout d'une fonctionnalité de **vision par ordinateur (R-CNN)** améliorant de **+7 %** les performances d'un pipeline d'extraction d'information par **reconnaissance d'entités nommées (NER)** appliqué aux avis d'imposition français.
 - **Fine-tuning d'un modèle BERT** pour la classification hiérarchique (3 niveaux) des courriers entrants, en appui aux équipes métier dans le traitement des demandes clients.
 
-**Stack & outils :** Dataiku · AWS S3 · Snowflake · Airflow · GitHub · Docker · Kubernetes · MLflow · PyTorch · scikit-learn · spaCy · NLTK · PyMuPDF.
+**Stack & outils :** Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · embeddings Cohere · GPT-5.1 · PyTorch · scikit-learn · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup.
 
 ### Stagiaire de recherche
 **Laboratoire des Méthodes Formelles (LMF), Orsay, France** · *Juin – Août 2024*

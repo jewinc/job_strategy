@@ -45,6 +45,21 @@ Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Te
 
 **Résultat.** 70 % de précision atteinte sur 200+ classes feuilles. Au-delà du modèle, les revues métier itératives ont permis au project owner de (1) quantifier les taux d'erreur du processus manuel, (2) identifier des cas particuliers que son équipe n'avait jamais caractérisés, et (3) détecter des contournements de processus par les employés — des résultats que le métier ne pouvait pas mesurer auparavant.
 
+#### 1.1.d — Service d'ingestion RAG pour l'assistant RH interne (Mai 2026 – aujourd'hui)
+
+**Situation.** Les équipes RH reçoivent en continu les mêmes questions de la part des employés de toute l'entreprise. Le contenu des réponses existe déjà sous forme d'environ 180 « articles » HTML sur un site interne. Un chatbot RAG était en construction par-dessus, et les services de chunking et d'indexation existaient déjà — mais les données étaient téléchargées par un *script séparé lancé à la main*, puis l'ingestion devait être déclenchée dans un second temps, également manuellement. Une passe complète de chunking + indexation retraitait *tous* les articles et prenait ~2 heures, quelle que soit l'ampleur réelle des changements.
+
+**Tâche.** J'ai piloté la partie ingestion au sein d'une petite équipe : absorber l'étape de scraping dans le service d'ingestion, rendre toute la chaîne scraping → chunking → indexation autonome et déployable en production, et rendre les mises à jour ciblées au lieu de porter sur tout le corpus.
+
+**Action.**
+- Écriture de la couche de scraping (`requests` + BeautifulSoup) sur le site interne (~180 articles HTML) et branchement direct sur les services de chunking et d'indexation existants — suppression des deux lancements manuels.
+- Implémentation d'une **ré-ingestion incrémentale** : hachage du contenu pertinent de chaque article pour détecter les vrais changements, et propagation de ce ciblage à toutes les étapes, afin que seuls les articles modifiés soient re-scrapés, re-chunkés et ré-indexés.
+- Correction d'un **bug de troncature silencieuse du LLM** qui faisait disparaître une partie du contenu de chaque article lors de la génération des chunks — résolu en clarifiant le prompt responsable et en changeant de modèle.
+- Passage de tous les appels LLM par un **proxy LiteLLM** (Cohere embed-large pour les embeddings, GPT-5.1 pour la génération). Stockage du HTML brut, des images et des pièces jointes ainsi que des chunks générés sur **AWS S3** ; indexation sur **AWS OpenSearch** en **recherche hybride (BM25 + k-NN approximatif)**.
+- Écriture de l'ensemble des cas de test (plus corrections de lint sur du code existant) pour passer la **pipeline CI Jenkins**, qui contrôle la couverture de tests puis construit et pousse l'image du conteneur sur l'**ECR** Docker interne. Le Tech Lead a réalisé le déploiement Airflow lui-même — ce n'est pas moi qui l'ai fait.
+
+**Résultat.** L'ingestion tourne sans intervention, en job Airflow conteneurisé dans l'environnement de production, sans étape manuelle de scraping ni de lancement. Une ré-indexation complète qui prenait ~2 heures pour tous les articles prend désormais quelques minutes, proportionnées au volume de changements. ~1 000 chunks issus de 180 articles sont servis au chatbot, actuellement restreint aux équipes RH pour validation avant déploiement à toute l'entreprise. Projet toujours en cours en juillet 2026.
+
 ---
 
 ### 1.2 Stagiaire de recherche (rémunéré, en solo) — Laboratoire des Méthodes Formelles (LMF), Université Paris-Saclay · *Juin – Août 2024*

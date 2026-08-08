@@ -6,11 +6,11 @@
 
 #set page(
   paper: "a4",
-  margin: (top: 12mm, bottom: 12mm, left: 20mm, right: 20mm),
+  margin: (top: 10mm, bottom: 10mm, left: 18mm, right: 18mm),
 )
 #set text(
   font: ("Times New Roman", "Liberation Serif", "Times"),
-  size: 10.5pt,
+  size: 10pt,
   lang: "en",
 )
 #set par(leading: 6pt, spacing: 7pt, justify: false)
@@ -88,9 +88,10 @@
   "AI Engineer / Data Scientist (apprenticeship)",
   "2024 – 2026 · 2 yrs",
   bullets: (
-    [Designed and shipped to production an *automatic document-classification system* (PDF reading and text recognition) reaching *85% accuracy* on *1.1M documents*; extracted *200K critical health-insurance contracts*, unblocking processing that had been stalled for years (8-month, 5-person project).],
-    [Integrated a *computer-vision* model into an automatic tax-notice reading chain (~100K per year), lifting performance by *+7 points* over the existing baseline.],
-    [Built an *automatic email-triage* model (*200+ categories*, ~20K emails per month) reaching *70% accuracy* in production; reported edge cases to the business in weekly reviews.],
+    [Led ingestion for the *RAG service* behind an internal *HR assistant chatbot*: made the *scraping → chunking → indexing* chain (*BeautifulSoup*, 180 articles → ~1K chunks) autonomous as a containerized job, added *content-hash incremental re-ingestion* cutting a *2-hour full re-index to minutes*, and fixed a *silent LLM truncation* bug dropping article content — *OpenSearch* hybrid search (*BM25* + *k-NN*), *S3*, *LiteLLM* proxy, tests and coverage gating a *Jenkins* image build.],
+    [Built and deployed a *batch document-classification pipeline* (PDF and OCR parsing → labelling → training → prediction) reaching *85% accuracy* on a *1.1M-document corpus*, extracting *200K critical health-insurance contracts* and unblocking work that had been blocked for years for contract managers (8-month, 5-person project).],
+    [Trained and integrated an *R-CNN computer-vision* model into a French tax-notice *NER* pipeline (~100K notices/year), lifting end-to-end performance by *+7 pp* over the QR-code-only baseline.],
+    [Fine-tuned *BERT* for *hierarchical email triage* (3 levels, *200+ leaf classes*, ~20K emails/month) reaching *70% accuracy* in production; surfaced edge cases and process-evasion patterns to the project owner via weekly business reviews — outcomes the team had no way of measuring before.],
   ),
 )
 
@@ -142,8 +143,8 @@
 
 #skill-line("Programming", "Python, SQL, Java, OCaml, Rust, JavaScript / Node.js, C / C++")
 #skill-line("AI / ML", "PyTorch, scikit-learn, Transformers (BERT), NER, computer vision, spaCy, NLTK, PyMuPDF, NumPy, Pandas")
-#skill-line("LLM / Agentic", "LangChain, LangGraph, RAG, multi-agent systems, prompt engineering, fine-tuning, LLM evaluation (faithfulness / groundedness), Snowflake Cortex (Agent, Search, REST API)")
-#skill-line("Data / MLOps", "MLflow, Docker, Kubernetes, CI/CD, Airflow, Spark, ETL pipelines, Snowflake, AWS S3, Dataiku")
+#skill-line("LLM / Agentic", "LangChain, LangGraph, LiteLLM, RAG (chunking, embeddings, hybrid BM25 + k-NN retrieval), multi-agent systems, prompt engineering, fine-tuning, LLM evaluation (faithfulness / groundedness), Snowflake Cortex")
+#skill-line("Data / MLOps", "MLflow, Docker / ECR, Kubernetes, Jenkins, CI/CD, Airflow, Spark, ETL / ingestion pipelines, AWS S3, AWS OpenSearch, Snowflake, Dataiku")
 #skill-line("Tools", "Git / GitHub / GitLab, Linux, JupyterLab, Visual Studio Code, IntelliJ IDEA, Tableau")
 #skill-line("Certifications", "Dataiku Core Designer; Dataiku ML Practitioner")
 #skill-line("Languages", "French (native); Mandarin Chinese (native); English (TOEIC 925/990, Linguaskill 177/180, EUGLOH program)")
