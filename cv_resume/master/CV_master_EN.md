@@ -22,11 +22,12 @@ AI / ML Engineer in the final year of an MSc in Computer Science for Data Scienc
 
 Member of the Data Science team within the MH Tech division, working in an Agile environment. Designed and delivered ML / NLP / Computer Vision models for document-processing business use cases, from exploration to batch industrialization.
 
+- Led the ingestion part of a **RAG service** powering an internal **HR assistant chatbot**: folded a manually-run scraping script into the service (`requests` / BeautifulSoup over ~180 internal HTML articles → ~1,000 LLM-generated chunks), making the whole **scraping → chunking → indexing** chain autonomous as a containerized production job. Added **content-hash incremental re-ingestion** across all stages, taking a ~2-hour full re-index of every article down to a few minutes; fixed a **silent LLM truncation bug** that dropped article content (prompt redesign + model change). **AWS OpenSearch** hybrid search (BM25 + approximate k-NN), **AWS S3** for raw HTML / images / attachments / chunks, LLM calls via a **LiteLLM** proxy (Cohere embed-large, GPT-5.1), tests + coverage gating a **Jenkins** CI pipeline that builds and pushes the image to an internal Docker ECR. *(May 2026 – ongoing; Airflow deployment handled by the Tech Lead.)*
 - Designed and deployed (batch) an **ML classification model** (85% accuracy) following **MLOps** best practices, qualifying one million customer contractual documents and unlocking a long-standing backlog for contract managers.
 - Added a **computer vision (R-CNN)** feature, improving by **+7 %** the performance of a **Named Entity Recognition (NER)** information-extraction pipeline applied to French tax notices.
 - **Fine-tuned a BERT model** for hierarchical classification (3 levels) of incoming emails, supporting business teams in handling customer requests.
 
-**Stack & tools:** Dataiku · AWS S3 · Snowflake · Airflow · GitHub · Docker · Kubernetes · MLflow · PyTorch · scikit-learn · spaCy · NLTK · PyMuPDF.
+**Stack & tools:** Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · Cohere embeddings · GPT-5.1 · PyTorch · scikit-learn · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup.
 
 ### Research intern
 **Formal Methods Laboratory (LMF), Orsay, France** · *June – August 2024*
