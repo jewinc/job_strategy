@@ -53,7 +53,6 @@ Keep **FR and EN versions in sync** when changing shared content.
 - Saved-HTML offers carry a sibling `*_files/` dir (browser cruft); ignore it. Extract job text by stripping tags from the `.html` (the cookie-banner/nav boilerplate is noise — grep for the mission/profile section).
 - **`cv_resume/answer.md`** — discovery Q&A: ground-truth detail on every experience plus HR-partner framing decisions. Read before writing any new bullet.
 - **`cv_resume/resume/fix.md`** — running list of manual corrections to apply to the resumes.
-- **`carreer_choice.md`** — career-status exploration notes (FR).
 
 ## Honest-framing rules (hard constraints)
 

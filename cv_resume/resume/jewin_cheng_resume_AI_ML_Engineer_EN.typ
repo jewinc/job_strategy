@@ -13,16 +13,16 @@
   size: 10.5pt,
   lang: "en",
 )
-#set par(leading: 5pt, spacing: 6pt, justify: false)
+#set par(leading: 6pt, spacing: 7pt, justify: false)
 
 // ─── helpers ─────────────────────────────────────────────────────────────
 
 #let section(title) = {
-  v(4pt)
+  v(8pt)
   text(weight: "bold", size: 11pt, upper(title))
   v(-3pt)
   line(length: 100%, stroke: 0.6pt + black)
-  v(1pt)
+  v(2pt)
 }
 
 #let entry(institution, location, role, dates, bullets: ()) = {
@@ -40,7 +40,7 @@
   for b in bullets {
     pad(left: 5mm, par[• #b])
   }
-  v(3pt)
+  v(7pt)
 }
 
 #let project(title, sub: none, bullets: ()) = {
@@ -53,7 +53,7 @@
   for b in bullets {
     pad(left: 5mm, par[• #b])
   }
-  v(4pt)
+  v(8pt)
 }
 
 #let skill-line(label, items) = {
@@ -74,7 +74,9 @@
 
 #section("Profile")
 
-#text(weight: "bold")[AI / ML Engineer with 2 years of experience building and deploying production AI systems at Malakoff Humanis. I make unstructured data usable — *LLMs*, *RAG*, *agentic systems* — with end-to-end ownership across *NLP*, *computer vision* and *MLOps*. Comfortable bridging technical delivery and business needs. Seeking a CDI as an AI / ML Engineer.]
+#text(weight: "bold")[AI Engineer for the past two years at Malakoff Humanis, I design and ship high-value production systems built on unstructured data — *LLMs*, *RAG* and *agentic systems*, with end-to-end command of *NLP*, *computer vision* and *MLOps*. Comfortable bridging technical delivery and business needs, I'm looking for my next role on a permanent contract as an AI Engineer / Data Scientist focused on LLMs and RAG.]
+
+#v(4pt)
 
 // ─── professional experience ─────────────────────────────────────────────
 
@@ -83,12 +85,12 @@
 #entry(
   "Malakoff Humanis — MH Tech, Data Science",
   "Paris, France",
-  "AI Engineer/Data Scientist",
-  "2024 – 2026",
+  "AI Engineer / Data Scientist (apprenticeship)",
+  "2024 – 2026 · 2 yrs",
   bullets: (
-    [Built and deployed a *batch document-classification pipeline* (PDF and OCR parsing → labelling → training → prediction) reaching *85% accuracy* on a *1.1M-document corpus*, extracting *200K critical health-insurance contracts* and unblocking work that had been blocked for years for contract managers (8-month, 5-person project).],
-    [Trained and integrated an *R-CNN computer-vision* model into a French tax-notice *NER* pipeline (~100K notices/year), lifting end-to-end performance by *+7 pp* over the QR-code-only baseline.],
-    [Fine-tuned *BERT* for *hierarchical email triage* (3 levels, *200+ leaf classes*, ~20K emails/month) reaching *70% accuracy* in production; surfaced edge cases and process-evasion patterns to the project owner via weekly business reviews — outcomes the team had no way of measuring before.],
+    [Designed and shipped to production an *automatic document-classification system* (PDF reading and text recognition) reaching *85% accuracy* on *1.1M documents*; extracted *200K critical health-insurance contracts*, unblocking processing that had been stalled for years (8-month, 5-person project).],
+    [Integrated a *computer-vision* model into an automatic tax-notice reading chain (~100K per year), lifting performance by *+7 points* over the existing baseline.],
+    [Built an *automatic email-triage* model (*200+ categories*, ~20K emails per month) reaching *70% accuracy* in production; reported edge cases to the business in weekly reviews.],
   ),
 )
 
@@ -96,9 +98,9 @@
   "Formal Methods Laboratory (LMF) — Université Paris-Saclay",
   "Orsay, France",
   "Research Intern",
-  "Jun 2024 – Aug 2024",
+  "Jun 2024 – Aug 2024 · 3 mos",
   bullets: (
-    [Studied *Monero zero-knowledge proofs* and built a *transaction-path visualization tool* using a public contaminated-transaction dataset; presented findings to the academic supervisor and a cyber police officer.],
+    [Built a *transaction-path visualization tool* for the Monero cryptocurrency; presented findings to the academic supervisor and a cyber police officer.],
   ),
 )
 
@@ -127,25 +129,11 @@
 #project(
   "Hackathon Gen AI 2026 — Multi-agent code-generation VS Code extension",
   sub: "Paris-Saclay × Paris 8 × UQAC (team of 4) — 2026",
-  bullets: (
-    [Built a *LangGraph* and *LangChain* multi-agent pipeline that turns a user need into specifications, validation, code and CI/CD configuration files, packaged as a *VS Code extension*.],
-  ),
 )
 
 #project(
   "RAG Ticket-Resolution Chatbot",
   sub: "MSc school project (team of 4) — 2025",
-  bullets: (
-    [Designed a *Snowflake Cortex* (Agent, Search, REST API) and *LangChain / LangGraph* RAG system, deployed as a *Streamlit* app on Snowflake; achieved *70% LLM-judged faithfulness and groundedness* on 2K sample tickets.],
-  ),
-)
-
-#project(
-  "RAG Nutrition Assistant",
-  sub: "MSc course project — team lead (5 people) — 2025",
-  bullets: (
-    [Led a *team of 5* on feature design (nutri-score computation, ingredient substitution, recipe rewriting) and coordinated with the project's other team leads; delivered a chatbot web application in 2 months.],
-  ),
 )
 
 // ─── skills, certifications, languages ───────────────────────────────────
