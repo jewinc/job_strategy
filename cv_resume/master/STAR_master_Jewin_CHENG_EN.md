@@ -41,6 +41,21 @@ Apprentice in the Data Science team (~30 people) within the MH Tech division. Wo
 
 **Result.** Reached 70% classification accuracy across 200+ leaf classes. Beyond the model, the iterative business review allowed the project owner to (1) quantify error rates in the existing manual process, (2) identify edge cases his team hadn't previously characterized, and (3) detect process-evasion patterns by employees — outcomes the business had no way of measuring before.
 
+#### 1.1.d — RAG ingestion service for the internal HR assistant (May 2026 – present)
+
+**Situation.** The HR teams field a constant stream of repetitive questions from employees across the company. The answer content already exists as ~180 HTML "articles" on an internal website. A RAG chatbot was being built on top of it, and the chunking and indexing services already existed — but the data was downloaded by a *separate script run by hand*, then ingestion had to be launched as a second manual step. A full chunking + indexing pass re-processed *every* article and took ~2 hours regardless of how little had changed.
+
+**Task.** I led the ingestion part of the project within a small team: absorb the scraping step into the ingestion service, make the whole scraping → chunking → indexing chain autonomous and production-deployable, and make updates targeted instead of full-corpus.
+
+**Action.**
+- Wrote the scraping layer (`requests` + BeautifulSoup) against the internal site (~180 HTML articles) and connected it directly to the existing chunking and indexing services — removing both manual launch steps.
+- Implemented **incremental re-ingestion**: hashing the relevant content of each article to detect real changes, and propagating that targeting across all stages so only changed articles are re-scraped, re-chunked and re-indexed.
+- Fixed a **silent LLM truncation bug** where part of each article's content was being dropped during chunk generation — resolved by clarifying the prompt responsible for it and switching the model.
+- Routed all LLM calls through a **LiteLLM proxy** (Cohere embed-large for embeddings, GPT-5.1 for generation). Stored raw HTML, images and attached files plus the generated chunks in **AWS S3**; indexed to **AWS OpenSearch** with **hybrid search (BM25 + approximate k-NN)**.
+- Wrote the complete test suite (plus lint fixes to existing code) to pass the **Jenkins CI pipeline**, which enforces test coverage then builds and pushes the container image to the internal Docker **ECR**. The Tech Lead handled the Airflow deployment itself — I did not do that part.
+
+**Result.** Ingestion runs unattended as a containerized Airflow job in the production environment, with no manual scraping or launch step. A full re-index that previously took ~2 hours for all articles now takes a few minutes, scaled to the size of the change set. ~1,000 chunks from 180 articles are served to the chatbot, currently restricted to the HR teams for validation before company-wide rollout. Ongoing as of July 2026.
+
 ---
 
 ### 1.2 Research Intern (paid, solo) — Formal Methods Laboratory (LMF), Université Paris-Saclay · *Jun–Aug 2024*
