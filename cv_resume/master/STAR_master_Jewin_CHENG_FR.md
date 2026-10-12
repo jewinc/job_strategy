@@ -1,17 +1,17 @@
 # STAR Master — Jewin CHENG
 
 > Document interne de préparation aux entretiens. Chaque expérience professionnelle et chaque projet académique majeur est rédigé au format STAR (Situation · Tâche · Action · Résultat). À réutiliser pour les entretiens comportementaux, les lettres de motivation, et comme source pour tout CV ciblé.
-> *Dernière mise à jour : mai 2026.*
+> *Dernière mise à jour : octobre 2026.*
 
 ---
 
 ## 1. Expérience professionnelle
 
-### 1.1 Data Scientist (Alternance) — Malakoff Humanis · MH Tech, Data Science · Paris · *2024–2026*
+### 1.1 AI Engineer / Data Scientist (Alternance) — Malakoff Humanis · MH Tech, Data Science · Paris · *Sept. 2024 – sept. 2026 · 2 ans*
 
-Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Tech. Travail en environnement Agile, principalement sur des tâches cœur sous l'accompagnement d'un tuteur. Exposition directe aux interlocuteurs métier (gestionnaires de contrats, project owner classification de mails).
+Alternance terminée le 11 septembre 2026. Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Tech. Travail en environnement Agile, principalement sur des tâches cœur sous l'accompagnement d'un tuteur. Exposition directe aux interlocuteurs métier (gestionnaires de contrats, project owner classification de mails).
 
-#### 1.1.a — Pipeline ML de classification documentaire (1,1 M de contrats)
+#### 1.1.a — Pipeline ML de classification documentaire (corpus de 1,1 M de documents)
 
 **Situation.** L'équipe Data Science de MH Tech faisait face à un stock historique d'environ 1,1 M de documents contractuels clients non qualifiés. Les gestionnaires de contrats devaient parcourir manuellement le corpus pour retrouver des types de documents spécifiques (conditions particulières, conditions générales, notice d'information, tableau de garantie, avenant), avec des délais récurrents. Le périmètre initial demandé par le sponsor était triple : classification, reconnaissance d'entités nommées (NER) et détection de signature.
 
@@ -31,7 +31,7 @@ Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Te
 
 **Action.** Entraînement d'un modèle Region-CNN (R-CNN) avec la stack CV de Dataiku pour détecter des zones (bounding boxes) sur les scans d'avis, intégration des zones détectées dans le pipeline NER amont, et réévaluation de la précision bout-à-bout.
 
-**Résultat.** Performance globale du pipeline améliorée de +7 points par rapport à la baseline QR-code-only, rendant l'extraction robuste sur les documents où la lecture du QR code échouait.
+**Résultat.** Performance globale du pipeline améliorée de +8 points par rapport à la baseline QR-code-only (~80 %), rendant l'extraction robuste sur les documents où la lecture du QR code échouait.
 
 ---
 
@@ -41,11 +41,11 @@ Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Te
 
 **Tâche.** Construire un classifieur automatique et collaborer avec le project owner pour affiner la taxonomie et faire émerger les cas de mauvaise orientation.
 
-**Action.** Fine-tuning d'un modèle BERT sur un corpus de mails labellisés, points hebdomadaires avec le project owner pour aligner les labels cibles, restitution du comportement du modèle pour exposer les cas particuliers et les incohérences de label, et itérations sur la taxonomie en fonction des retours métier. Projet toujours en cours en mai 2026.
+**Action.** Fine-tuning d'un modèle BERT sur un corpus de mails labellisés, points hebdomadaires avec le project owner pour aligner les labels cibles, restitution du comportement du modèle pour exposer les cas particuliers et les incohérences de label, et itérations sur la taxonomie en fonction des retours métier. Modèle encore en itération à la fin de mon alternance (septembre 2026).
 
 **Résultat.** 70 % de précision atteinte sur 200+ classes feuilles. Au-delà du modèle, les revues métier itératives ont permis au project owner de (1) quantifier les taux d'erreur du processus manuel, (2) identifier des cas particuliers que son équipe n'avait jamais caractérisés, et (3) détecter des contournements de processus par les employés — des résultats que le métier ne pouvait pas mesurer auparavant.
 
-#### 1.1.d — Service d'ingestion RAG pour l'assistant RH interne (Mai 2026 – aujourd'hui)
+#### 1.1.d — Service d'ingestion RAG pour l'assistant RH interne (mai – septembre 2026)
 
 **Situation.** Les équipes RH reçoivent en continu les mêmes questions de la part des employés de toute l'entreprise. Le contenu des réponses existe déjà sous forme d'environ 180 « articles » HTML sur un site interne. Un chatbot RAG était en construction par-dessus, et les services de chunking et d'indexation existaient déjà — mais les données étaient téléchargées par un *script séparé lancé à la main*, puis l'ingestion devait être déclenchée dans un second temps, également manuellement. Une passe complète de chunking + indexation retraitait *tous* les articles et prenait ~2 heures, quelle que soit l'ampleur réelle des changements.
 
@@ -58,19 +58,19 @@ Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Te
 - Passage de tous les appels LLM par un **proxy LiteLLM** (Cohere embed-large pour les embeddings, GPT-5.1 pour la génération). Stockage du HTML brut, des images et des pièces jointes ainsi que des chunks générés sur **AWS S3** ; indexation sur **AWS OpenSearch** en **recherche hybride (BM25 + k-NN approximatif)**.
 - Écriture de l'ensemble des cas de test (plus corrections de lint sur du code existant) pour passer la **pipeline CI Jenkins**, qui contrôle la couverture de tests puis construit et pousse l'image du conteneur sur l'**ECR** Docker interne. Le Tech Lead a réalisé le déploiement Airflow lui-même — ce n'est pas moi qui l'ai fait.
 
-**Résultat.** L'ingestion tourne sans intervention, en job Airflow conteneurisé dans l'environnement de production, sans étape manuelle de scraping ni de lancement. Une ré-indexation complète qui prenait ~2 heures pour tous les articles prend désormais quelques minutes, proportionnées au volume de changements. ~1 000 chunks issus de 180 articles sont servis au chatbot, actuellement restreint aux équipes RH pour validation avant déploiement à toute l'entreprise. Projet toujours en cours en juillet 2026.
+**Résultat.** L'ingestion tourne sans intervention, en job Airflow conteneurisé dans l'environnement de production, sans étape manuelle de scraping ni de lancement. Une ré-indexation complète qui prenait ~2 heures pour tous les articles prend désormais quelques minutes, proportionnées au volume de changements. ~1 000 chunks issus de 180 articles sont servis au chatbot, restreint aux équipes RH pour validation avant déploiement à toute l'entreprise à la fin de mon alternance (septembre 2026).
 
 ---
 
-### 1.2 Stagiaire de recherche (rémunéré, en solo) — Laboratoire des Méthodes Formelles (LMF), Université Paris-Saclay · *Juin – Août 2024*
+### 1.2 Stagiaire de recherche (rémunéré, en solo) — Laboratoire des Méthodes Formelles (LMF), Université Paris-Saclay · *Juin – août 2024 · 3 mois*
 
-**Situation.** Le LMF travaillait sur la traçabilité et la sécurité de la cryptomonnaie Monero dans le cadre d'enquêtes anti-blanchiment, en collaboration avec une unité de cyber criminalité.
+**Situation.** Le LMF travaillait sur la traçabilité et la sécurité de la cryptomonnaie Monero dans le cadre d'enquêtes anti-blanchiment, en lien avec l'unité cybercriminalité de la gendarmerie.
 
 **Tâche.** Étudier les fondements cryptographiques de Monero (preuves à divulgation nulle, signatures en anneau, adresses furtives), expliquer le modèle de sécurité à l'encadrant, et prototyper un petit outil de visualisation pour afficher des chemins de transactions traçables.
 
 **Action.** Revue de la littérature cryptographique sur les primitives de confidentialité de Monero, exploitation d'une base publique de transactions contaminées (transactions connues comme liées à travers la chaîne) pour identifier des chemins traçables, et construction d'un outil de visualisation pour rendre ces chemins sous forme de graphes de transactions.
 
-**Résultat.** Présentation des conclusions et de l'outil de visualisation à l'encadrant universitaire et à un officier en cyber criminalité. Contribution à la base de connaissance interne du laboratoire sur la traçabilité Monero. Pas de rapport formel livré.
+**Résultat.** Présentation des conclusions et de l'outil de visualisation à l'encadrant universitaire et à un officier de la gendarmerie spécialisé en cybercriminalité. Pas de rapport formel livré.
 
 ---
 
@@ -88,7 +88,7 @@ Apprenti au sein de l'équipe Data Science (~30 personnes) de la direction MH Te
 
 ## 2. Formation
 
-### 2.1 Master Informatique pour la Science des Données (*Master ISD*) — *Université Paris-Saclay, Orsay* — *2024–2026*
+### 2.1 Master Informatique pour la Science des Données (*Master ISD*) — *Université Paris-Saclay, Orsay* — *2024–2026 · diplômé*
 
 Rapport d'activité final basé sur le travail d'alternance chez Malakoff Humanis.
 
@@ -108,7 +108,7 @@ Rapport d'activité final basé sur le travail d'alternance chez Malakoff Humani
 
 ---
 
-##### b. RAG pour la nutrition — *projet de cours de 2 mois · responsable d'équipe · ~25 étudiants*
+##### b. RAG pour la nutrition — *projet de cours de 2 mois · chef d'une équipe de 5 (l'une des 5 sous-équipes) · ~25 étudiants au total*
 
 **Situation.** Projet de cours sur 2 mois, organisé en initiative collaborative à 25 étudiants pour construire un système RAG dans le domaine de la nutrition, structuré en plusieurs équipes par fonctionnalité.
 
@@ -120,7 +120,7 @@ Rapport d'activité final basé sur le travail d'alternance chez Malakoff Humani
 
 ---
 
-##### c. Hackathon Gen AI 2026 — Système agentique de génération de code — *Paris-Saclay × Paris 8 × UQAC · équipe de 4*
+##### c. Hackathon Gen AI 2026 — Système agentique de génération de code — *Paris-Saclay × Paris 8 × UQAC · équipe de 4 · avril 2026*
 
 **Situation.** Hackathon Gen AI 2026, co-organisé par l'Université Paris-Saclay, l'Université Paris 8 et l'UQAC (Chicoutimi). Défi : construire un système d'IA générative multi-agents bout-à-bout traitant un véritable workflow d'ingénierie.
 
@@ -158,6 +158,14 @@ Projet de cours en solo sur IBM Cloud — conception et configuration d'un chatb
 
 Mini-jeu interactif TUI à deux joueurs sur le testnet Ethereum, en Python avec la librairie `web3`.
 
+##### i. Fouille de données — recherche d'itemsets
+
+Pipeline interactif de recherche d'itemsets fréquents en Java (Choco-Mining / SPMF).
+
+##### j. Data warehousing
+
+Conception de schémas en étoile / flocon et implémentation de jobs ETL / ELT.
+
 ---
 
 ### 2.2 Licence Informatique et Mathématiques — *Université Paris-Saclay, Orsay* — *2021–2024*
@@ -176,7 +184,7 @@ Dernière année (L3) suivie en *parcours magistère* (filière sélective d'exc
 
 **Action.** J'ai porté la partie implémentation — pipeline de données, code des modèles GCN/GAT, scripts d'entraînement et d'inférence en PyTorch. Mon coéquipier a pris en charge la compréhension des architectures et la théorie sous-jacente du graph learning.
 
-**Résultat.** La phase d'exploration n'a pas produit de métriques finales (précision/F1) dans la fenêtre de 4 mois. Livraison d'une base de code PyTorch réutilisable et d'une compréhension architecturale qui sert de socle pour les travaux suivants du laboratoire — et a directement conduit au stage au LMF à l'été 2024.
+**Résultat.** La phase d'exploration n'a pas produit de métriques finales (précision/F1) dans la fenêtre de 4 mois. Livraison d'une base de code PyTorch et d'une compréhension concrète de GCN / GAT sur des données blockchain — et a directement conduit au stage au LMF à l'été 2024.
 
 ---
 
@@ -184,7 +192,7 @@ Dernière année (L3) suivie en *parcours magistère* (filière sélective d'exc
 
 Projet de cours en compilation / langages de programmation. Implémentation d'un sous-ensemble de Lua (variables, fonctions, coroutines) en OCaml, puis portage du même sous-ensemble en Rust en exercice de prolongement. Pratique concrète de la conception d'analyseur lexical/syntaxique/évaluateur et du Rust idiomatique.
 
-##### c. Interpréteur d'un langage objet inspiré de Java (OCaml) — *projet de cours en solo · code disponible sur demande*
+##### c. Kawa — interpréteur d'un langage objet inspiré de Java (OCaml) — *projet de cours en solo · code disponible sur demande*
 
 Projet de cours en compilation / langages. Solo. Conception en OCaml de l'analyseur lexical, syntaxique, du vérificateur de types statique et de l'évaluateur. Support des classes, de l'héritage et de la vérification statique. Signal systèmes solide qui complète le profil IA / ML.
 
@@ -194,7 +202,7 @@ Projet de cours en duo. Construction d'un pipeline de préparation de corpus et 
 
 ##### e. Pipeline ML — Survie de patients & classification d'images de plantes — *duo*
 
-Projet de cours en duo. Analyse de données, prétraitement et modèles d'apprentissage avec `scikit-learn` sur JupyterLab. Livrable au format notebook.
+Projet de cours en duo. Classification tabulaire et d'images : analyse de données, prétraitement, modèles Perceptron / Random Forest / XGBoost, validation croisée et évaluation accuracy / recall / F1, avec `scikit-learn` sur JupyterLab. Livrable au format notebook.
 
 ##### f. Étude de recherche — Cryptographie et traçabilité de Bitcoin / Monero — *2023–2024*
 
@@ -229,11 +237,11 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 
 ## 3. Compétences techniques
 
-- **Langages de programmation.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Solidity (notions).
-- **IA / ML.** PyTorch · scikit-learn · Transformers (BERT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
-- **LLM / Agentique.** LangChain · LangGraph · Snowflake Cortex (Agent, Search, REST API) · RAG · systèmes multi-agents.
-- **Data engineering & plateformes.** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · OLAP SQL · Tableau.
-- **MLOps & DevOps.** MLflow · Docker · Kubernetes · Git / GitHub / GitLab · Linux.
+- **Langages de programmation.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Bash / Shell · Solidity (notions).
+- **IA / ML.** PyTorch · scikit-learn · XGBoost · Hugging Face Transformers (BERT, fine-tuning) · NLP · NER · vision par ordinateur (R-CNN) · OCR / parsing PDF · GNN (GCN, GAT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
+- **LLM / Agentique.** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, recherche hybride BM25 + k-NN, ré-ingestion incrémentale) · systèmes multi-agents · prompt engineering · fine-tuning · évaluation LLM (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
+- **Data engineering & plateformes.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · pipelines ETL / ingestion · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (schémas en étoile / flocon) · qualité des données · Dataiku · Tableau · Streamlit.
+- **MLOps & DevOps.** MLflow (versioning, monitoring, pipeline de prédiction) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · tests unitaires & couverture · Git / GitHub / GitLab · Linux.
 - **Méthodologies.** Agile · MLOps · Cascade · MVC.
 - **Outils.** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 - **Création numérique.** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
@@ -242,8 +250,8 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 
 ## 4. Certifications
 
-- **Dataiku Core Designer**
-- **Dataiku ML Practitioner**
+- **Dataiku Core Designer** — octobre 2024
+- **Dataiku ML Practitioner** — janvier 2025
 
 ---
 
@@ -251,7 +259,7 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 
 - **Français** — langue maternelle
 - **Chinois (Mandarin)** — langue maternelle
-- **Anglais** — TOEIC 925/990 · Linguaskill 177/180 · participant au programme EUGLOH
+- **Anglais** — TOEIC 925/990 (janvier 2025, valide jusqu'en janvier 2027) · Linguaskill 177/180 · participant au programme EUGLOH
 
 ---
 
