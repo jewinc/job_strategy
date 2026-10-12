@@ -48,7 +48,7 @@ Bonjour,
 
 AI / ML Engineer avec 2 ans d'expérience chez Malakoff Humanis, je conçois et déploie des systèmes IA de bout en bout — du document métier brut à l'agent LLM en production (NLP, RAG, systèmes agentiques, MLOps). Mon pipeline de classification documentaire a atteint *85 % de précision* sur *1,1 M de documents* et débloqué *200 K contrats critiques*.
 
-Le poste de *#poste* chez *#entreprise* correspond à ce que je sais faire et à ce sur quoi je veux progresser. Je serais ravi d'échanger.
+Le poste de *#poste* chez *#entreprise* correspond à ce que je sais faire et à ce sur quoi je veux progresser. Disponible immédiatement, je serais ravi d'échanger.
 
 #v(8mm)
 

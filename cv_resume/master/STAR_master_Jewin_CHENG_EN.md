@@ -1,17 +1,17 @@
 # STAR Master — Jewin CHENG
 
 > Internal interview-prep document. Each professional experience and major academic project is written in STAR format (Situation · Task · Action · Result). Reuse for behavioral interviews, motivation letters, and as the source for any targeted CV.
-> *Last updated: May 2026.*
+> *Last updated: October 2026.*
 
 ---
 
 ## 1. Professional experience
 
-### 1.1 Data Scientist (Apprenticeship) — Malakoff Humanis · MH Tech, Data Science · Paris · *2024–2026*
+### 1.1 AI Engineer / Data Scientist (Apprenticeship) — Malakoff Humanis · MH Tech, Data Science · Paris · *Sept 2024 – Sept 2026 · 2 years*
 
-Apprentice in the Data Science team (~30 people) within the MH Tech division. Worked in an Agile environment, mostly assigned core tasks under a tutor's guidance. Direct exposure to business stakeholders (contract managers, mail-classification project owner).
+Apprenticeship ended on 11 September 2026. Apprentice in the Data Science team (~30 people) within the MH Tech division. Worked in an Agile environment, mostly assigned core tasks under a tutor's guidance. Direct exposure to business stakeholders (contract managers, mail-classification project owner).
 
-#### 1.1.a — ML document classification pipeline (1.1M contracts)
+#### 1.1.a — ML document classification pipeline (1.1M-document corpus)
 
 **Situation.** The MH Tech Data Science team faced a long-standing backlog of ~1.1M unclassified customer contractual documents. Contract managers had to manually search the corpus for specific document types (conditions particulières, conditions générales, notice d'information, tableau de garantie, avenant), creating recurring delays. Original sponsor scope was triple: classification, named-entity recognition (NER), and signature detection.
 
@@ -29,7 +29,7 @@ Apprentice in the Data Science team (~30 people) within the MH Tech division. Wo
 
 **Action.** Trained a Region-CNN (R-CNN) model using Dataiku's CV stack to detect bounding regions on tax-notice scans, integrated the detected regions into the upstream NER pipeline, and re-evaluated end-to-end accuracy.
 
-**Result.** End-to-end pipeline performance improved by +7 percentage points over the QR-only baseline, making extraction robust on documents where QR-code scanning previously failed.
+**Result.** End-to-end pipeline performance improved by +8 percentage points over the QR-only baseline (~80%), making extraction robust on documents where QR-code scanning previously failed.
 
 #### 1.1.c — BERT fine-tuning for hierarchical email classification
 
@@ -37,11 +37,11 @@ Apprentice in the Data Science team (~30 people) within the MH Tech division. Wo
 
 **Task.** Build an automated classifier and partner with the project owner to refine the taxonomy and surface mis-routing cases.
 
-**Action.** Fine-tuned a BERT model on a labeled email corpus, ran weekly planning meetings with the project owner to align on target labels, reported model behavior to expose edge cases and label inconsistencies, and iterated on the taxonomy based on business feedback. Project still ongoing as of May 2026.
+**Action.** Fine-tuned a BERT model on a labeled email corpus, ran weekly planning meetings with the project owner to align on target labels, reported model behavior to expose edge cases and label inconsistencies, and iterated on the taxonomy based on business feedback. Model still being iterated when my apprenticeship ended (September 2026).
 
 **Result.** Reached 70% classification accuracy across 200+ leaf classes. Beyond the model, the iterative business review allowed the project owner to (1) quantify error rates in the existing manual process, (2) identify edge cases his team hadn't previously characterized, and (3) detect process-evasion patterns by employees — outcomes the business had no way of measuring before.
 
-#### 1.1.d — RAG ingestion service for the internal HR assistant (May 2026 – present)
+#### 1.1.d — RAG ingestion service for the internal HR assistant (May – September 2026)
 
 **Situation.** The HR teams field a constant stream of repetitive questions from employees across the company. The answer content already exists as ~180 HTML "articles" on an internal website. A RAG chatbot was being built on top of it, and the chunking and indexing services already existed — but the data was downloaded by a *separate script run by hand*, then ingestion had to be launched as a second manual step. A full chunking + indexing pass re-processed *every* article and took ~2 hours regardless of how little had changed.
 
@@ -54,19 +54,19 @@ Apprentice in the Data Science team (~30 people) within the MH Tech division. Wo
 - Routed all LLM calls through a **LiteLLM proxy** (Cohere embed-large for embeddings, GPT-5.1 for generation). Stored raw HTML, images and attached files plus the generated chunks in **AWS S3**; indexed to **AWS OpenSearch** with **hybrid search (BM25 + approximate k-NN)**.
 - Wrote the complete test suite (plus lint fixes to existing code) to pass the **Jenkins CI pipeline**, which enforces test coverage then builds and pushes the container image to the internal Docker **ECR**. The Tech Lead handled the Airflow deployment itself — I did not do that part.
 
-**Result.** Ingestion runs unattended as a containerized Airflow job in the production environment, with no manual scraping or launch step. A full re-index that previously took ~2 hours for all articles now takes a few minutes, scaled to the size of the change set. ~1,000 chunks from 180 articles are served to the chatbot, currently restricted to the HR teams for validation before company-wide rollout. Ongoing as of July 2026.
+**Result.** Ingestion runs unattended as a containerized Airflow job in the production environment, with no manual scraping or launch step. A full re-index that previously took ~2 hours for all articles now takes a few minutes, scaled to the size of the change set. ~1,000 chunks from 180 articles are served to the chatbot, restricted to the HR teams for validation before company-wide rollout as of the end of my apprenticeship (September 2026).
 
 ---
 
-### 1.2 Research Intern (paid, solo) — Formal Methods Laboratory (LMF), Université Paris-Saclay · *Jun–Aug 2024*
+### 1.2 Research Intern (paid, solo) — Formal Methods Laboratory (LMF), Université Paris-Saclay · *Jun–Aug 2024 · 3 months*
 
-**Situation.** LMF was investigating the traceability and security of the Monero cryptocurrency in the context of money-laundering investigations, with engagement from a cyber police unit.
+**Situation.** LMF was investigating the traceability and security of the Monero cryptocurrency in the context of money-laundering investigations, with engagement from the French gendarmerie's cybercrime unit.
 
 **Task.** Study the cryptographic foundations of Monero (zero-knowledge proofs, ring signatures, stealth addresses), explain the security model to my supervisor, and prototype a small visualization tool to display traceable-transaction paths.
 
 **Action.** Reviewed the cryptographic literature on Monero's privacy primitives, used a public database of contaminated transactions (transactions known to be linked across the chain) to identify traceable paths, and built a visualization tool to render those paths as transaction graphs.
 
-**Result.** Presented findings and the visualization tool to the academic supervisor and a cyber police officer. Contributed to the lab's internal knowledge base on Monero traceability. No formal report deliverable.
+**Result.** Presented findings and the visualization tool to the academic supervisor and an officer from the French gendarmerie's cybercrime unit. No formal report deliverable.
 
 ---
 
@@ -84,9 +84,9 @@ Apprentice in the Data Science team (~30 people) within the MH Tech division. Wo
 
 ## 2. Education
 
-### 2.1 MSc in Computer Science for Data Science (*Master ISD*) — *Université Paris-Saclay, Orsay* — *2024–2026*
+### 2.1 MSc in Computer Science for Data Science (*Master ISD*) — *Université Paris-Saclay, Orsay* — *2024–2026 · graduated*
 
-Final activity report based on apprenticeship work at Malakoff Humanis.
+Work-study program; final activity report based on apprenticeship work at Malakoff Humanis.
 
 **Coursework.** AI & ML (Deep Learning, feature engineering, dimensionality reduction, clustering, neural networks, Transformers, LLMs, RAG, agentic systems) · Data Engineering (database modeling, Data Lake on HDFS/Spark, Data Warehouse, OLAP SQL) · Visualization (Tableau, dashboard design) · Algorithms (graphs, network flows, algorithm proofs) · Mathematics (probability, statistics, PCA, SVD) · Software Development (JavaScript, Node.js).
 
@@ -102,7 +102,7 @@ Final activity report based on apprenticeship work at Malakoff Humanis.
 
 **Result.** Achieved ~70% on faithfulness and groundedness. Working deployed Streamlit demo on Snowflake.
 
-##### b. RAG for nutrition — *2-month course project · sub-team lead · ~25 students*
+##### b. RAG for nutrition — *2-month course project · lead of a 5-person sub-team (one of 5) · ~25 students total*
 
 **Situation.** Two-month course project organized as a 25-student collaborative initiative to build a nutrition-domain RAG system, structured into multiple feature sub-teams.
 
@@ -112,7 +112,7 @@ Final activity report based on apprenticeship work at Malakoff Humanis.
 
 **Result.** Delivered a working web application within the 2-month deadline. Cross-team coordination experience across a 25-person student project — rare leadership signal at MSc level.
 
-##### c. Hackathon Gen AI 2026 — Multi-agent code-generation system — *Paris-Saclay × Paris 8 × UQAC · team of 4*
+##### c. Hackathon Gen AI 2026 — Multi-agent code-generation system — *Paris-Saclay × Paris 8 × UQAC · team of 4 · April 2026*
 
 **Situation.** Hackathon Gen AI 2026, co-organized by Université Paris-Saclay, Université Paris 8, and UQAC (Chicoutimi). Challenge: build an end-to-end multi-agent generative-AI system addressing a real engineering workflow.
 
@@ -146,6 +146,14 @@ Solo course project on IBM Cloud — designed and configured an IBM Watson Assis
 
 Built an interactive TUI two-player mini-game on the Ethereum testnet using the Python `web3` library.
 
+##### i. Data mining — itemset mining pipeline
+
+Interactive frequent-itemset mining pipeline in Java (Choco-Mining / SPMF).
+
+##### j. Data warehousing
+
+Star / snowflake schema design and implementation of ETL / ELT jobs.
+
 ---
 
 ### 2.2 BSc in Computer Science and Mathematics — *Université Paris-Saclay, Orsay* — *2021–2024*
@@ -164,13 +172,13 @@ Final year (L3) completed in the *parcours magistère* (selective honors track).
 
 **Action.** I owned the implementation track — wrote the data pipeline, GCN/GAT model code, and training/inference scripts in PyTorch. My teammate handled architecture comprehension and the underlying graph-learning math.
 
-**Result.** Exploration phase did not yield final accuracy/F1 metrics within the 4-month window. Delivered a reusable PyTorch codebase and architectural understanding that supports follow-up research in the lab — and led directly to the LMF research internship in summer 2024.
+**Result.** Exploration phase did not yield final accuracy/F1 metrics within the 4-month window. Delivered a PyTorch codebase and a working understanding of GCN / GAT on blockchain data — and led directly to the LMF research internship in summer 2024.
 
 ##### b. Lua interpreter (OCaml → ported to Rust) — *solo course project · code can be made public*
 
 Compiler / programming-languages course. Implemented a Lua subset (variables, functions, coroutines) in OCaml, then ported the same subset to Rust as a follow-up exercise. Hands-on experience with lexer/parser/evaluator design and idiomatic Rust.
 
-##### c. Java-like OOP language interpreter (OCaml) — *solo course project · code can be made public*
+##### c. Kawa — Java-like OOP language interpreter (OCaml) — *solo course project · code can be made public*
 
 Compiler / PL course project. Solo. Designed lexer, parser, static type-checker, and evaluator in OCaml. Supported classes, inheritance, and static type checking. Strong systems-level signal that complements the AI/ML profile.
 
@@ -180,7 +188,7 @@ Duo course project. Built a corpus-preparation pipeline and trained models for m
 
 ##### e. ML pipeline — Patient survival & plant-image classification — *duo*
 
-Duo course project. Data analysis, preprocessing, and learning models in JupyterLab using `scikit-learn`. Notebook-based deliverable.
+Duo course project. Tabular and image classification: data analysis, preprocessing, Perceptron / Random Forest / XGBoost models, cross-validation and accuracy / recall / F1 evaluation, in JupyterLab using `scikit-learn`. Notebook-based deliverable.
 
 ##### f. Research study — Cryptography and traceability of Bitcoin / Monero — *2023–2024*
 
@@ -215,11 +223,11 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 ## 3. Technical skills
 
-- **Programming languages.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Solidity (basics).
-- **AI / ML.** PyTorch · scikit-learn · Transformers (BERT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
-- **LLM / Agentic.** LangChain · LangGraph · Snowflake Cortex (Agent, Search, REST API) · RAG · multi-agent systems.
-- **Data engineering & platforms.** Dataiku · AWS S3 · Snowflake · Airflow · Spark · HDFS · OLAP SQL · Tableau.
-- **MLOps & DevOps.** MLflow · Docker · Kubernetes · Git / GitHub / GitLab · Linux.
+- **Programming languages.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Bash / Shell · Solidity (basics).
+- **AI / ML.** PyTorch · scikit-learn · XGBoost · Hugging Face Transformers (BERT, fine-tuning) · NLP · NER · computer vision (R-CNN) · OCR / PDF parsing · GNN (GCN, GAT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
+- **LLM / Agentic.** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, hybrid BM25 + k-NN retrieval, incremental re-ingestion) · multi-agent systems · prompt engineering · fine-tuning · LLM evaluation (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
+- **Data engineering & platforms.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · ETL / ingestion pipelines · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (star / snowflake schemas) · data quality · Dataiku · Tableau · Streamlit.
+- **MLOps & DevOps.** MLflow (versioning, monitoring, prediction pipeline) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · unit tests & coverage · Git / GitHub / GitLab · Linux.
 - **Methodologies.** Agile · MLOps · Waterfall · MVC.
 - **Tools.** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 - **Digital creation.** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
@@ -228,8 +236,8 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 ## 4. Certifications
 
-- **Dataiku Core Designer**
-- **Dataiku ML Practitioner**
+- **Dataiku Core Designer** — October 2024
+- **Dataiku ML Practitioner** — January 2025
 
 ---
 
@@ -237,7 +245,7 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 - **French** — native speaker
 - **Mandarin Chinese** — native speaker
-- **English** — TOEIC 925/990 · Linguaskill 177/180 · participant in the EUGLOH program
+- **English** — TOEIC 925/990 (January 2025, valid until January 2027) · Linguaskill 177/180 · participant in the EUGLOH program
 
 ---
 
@@ -247,7 +255,7 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 Member during the first year of BSc. Promoted weekly video-game sessions on various consoles (managing title rotation and platform setup) and hosted free art-creation stands open to all students (painting, resin making).
 
-### Cul'd'jap — Université Paris-Saclay · *during BSc*
+### Cul'd'jap — Université Paris-Saclay · *2nd year of BSc, 2022 – 2023*
 
 Member of the association dedicated to Japanese culture. Promoted Asian board games — Go and Shogi — through introductory sessions and informal play events; hosted a cooking workshop on mochi making.
 
