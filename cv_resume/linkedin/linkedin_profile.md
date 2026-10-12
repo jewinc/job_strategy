@@ -25,7 +25,7 @@ sept. 2024 - sept. 2026 · 2 ans
 
 Ville de Paris, Île-de-France, France · Sur site
 
-🔹 Classification documentaire à grande échelle — Conçu et déployé un pipeline de bout en bout (parsing PDF, OCR, labellisation, entraînement, inférence batch), 85 % de précision sur 1,1 M de documents. Extraction de 200 K contrats santé critiques, déblocage d'un chantier à l'arrêt depuis des années. (8 mois, équipe de 5.)
+🔹 Classification documentaire à grande échelle — Construit le cœur d'un pipeline déployé en batch (parsing PDF / OCR → échantillonnage pour la labellisation → entraînement → prédiction), 85 % de précision sur 1,1 M de documents. Extraction de 200 K contrats santé critiques, déblocage d'un chantier à l'arrêt depuis des années. (8 mois, équipe de 5.)
 
 🔹 Vision par ordinateur en pipeline NER — Entraîné et intégré un modèle R-CNN dans un pipeline d'extraction d'avis d'imposition (100 K/an), +8 points vs baseline QR-code seul (80 %).
 
@@ -420,8 +420,6 @@ Université Paris-Saclay
 GitHub Actions
 
 Hackathon Gen AI 2026 — Système agentique de génération de code
-
-AI Engineer / Data Scientist chez Malakoff Humanis
 
 Bash / Shell
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-This is **not a software project**. It is the personal job-search workspace of **Jewin Cheng** (AI/ML Engineer, MSc Paris-Saclay, ~2 years apprentice experience at Malakoff Humanis, seeking a CDI in 2026). It holds CV/resume sources, the LinkedIn profile draft, cover letters, and a corpus of real job offers used to drive optimization. Output artifacts are PDFs generated from Typst sources.
+This is **not a software project**. It is the personal job-search workspace of **Jewin Cheng** (AI/ML Engineer, MSc Paris-Saclay graduated 2026, 2 years as AI Engineer / Data Scientist apprentice at Malakoff Humanis — Sept 2024 to 11 Sept 2026 — available immediately for a CDI). It holds CV/resume sources, the LinkedIn profile draft, cover letters, and a corpus of real job offers used to drive optimization. Output artifacts are PDFs generated from Typst sources.
 
 `README.md` is a stub (title only) — no information there.
 
@@ -50,7 +50,7 @@ Keep **FR and EN versions in sync** when changing shared content.
 
 ### Templates are copied, not imported
 
-Targeted resumes **do not `#import` the template** — each `.typ` inlines its own copy of the `section`/`entry`/`project`/`skill-line` helpers, with *tighter* values than the template (e.g. FR resume: `margin: 10mm` top/bottom, `size: 10pt`, `section` opens with `v(4pt)`; template: `18mm`, `10.5pt`, `v(8pt)`). Consequences:
+Targeted resumes **do not `#import` the template** — each `.typ` inlines its own copy of the `section`/`entry`/`project`/`skill-line` helpers, with *tighter* values than the template (e.g. FR resume: `margin: 8mm` top/bottom, `size: 10pt`, `section` opens with `v(5pt)`; template: `18mm`, `10.5pt`, `v(8pt)`). Consequences:
 
 - Editing a `master/resume_template*.typ` helper changes **nothing** downstream. Edit the resume file itself.
 - Spacing tweaks made to fit 1 page must be repeated per file, and per language.
@@ -61,17 +61,20 @@ Targeted resumes **do not `#import` the template** — each `.typ` inlines its o
 - **`feedback/refused_job_post/`** — offers where applications with these resumes were rejected. Learn what was missing from these.
 - Saved-HTML offers may carry a sibling `*_files/` dir (browser cruft); ignore it. Extract job text by stripping tags from the `.html` (the cookie-banner/nav boilerplate is noise — grep for the mission/profile section).
 - Filenames in `feedback/` contain spaces, `&`, and accents — always quote paths.
-- **`cv_resume/answer.md`** — discovery Q&A: ground-truth detail on every experience plus HR-partner framing decisions. Read before writing any new bullet.
-- **`cv_resume/resume/fix.md`** — running list of manual corrections to apply to the resumes.
+- **`cv_resume/resume/fix.md`** — running list of manual corrections, split into a *CV maître* section (masters) and a *CV/Resume* section (targeted resumes).
 
 ## Honest-framing rules (hard constraints)
 
-These come from `answer.md` and prior sessions — keep every claim verifiable:
+The masters (`CV_master_*` + `STAR_master_*`) are the ground truth — the former discovery Q&A (`answer.md`) was retired and its facts folded into them. Keep every claim verifiable:
 
-- **Never invent metrics, tools, or scope.** Only add a skill/number if it is true and traceable to `answer.md` or the masters. When unsure, ask rather than assume.
+- **Never invent metrics, tools, or scope.** Only add a skill/number if it is true and traceable to the masters. When unsure, ask rather than assume.
 - Malakoff classification: framed as "extracted 200K critical contracts," **not** "cleared the backlog" (it wasn't cleared).
 - Downplay the Dataiku **low-code** signal; lead with the Python stack.
 - The Nutrition RAG project: led a **team of 5** (one of 5 sub-teams, ~25 students total) — do not phrase as "responsible for 25 students."
+- R-CNN tax-notice gain is **+8 points** over an 80% QR-code baseline (never "+7").
+- BERT email classifier (70%) was **never deployed to production** — never write "in production" for it.
+- LMF research internship: **June–August 2024, 3 months, paid, solo** (Monero study + visualization tool). The GNN TER (Feb–May 2024) is a separate BSc project, not part of the internship.
+- Malakoff job title is **AI Engineer / Data Scientist (apprenticeship)**. CI at Malakoff was **Jenkins**; GitHub Actions / "CI capability" belongs to the Hackathon Gen AI project — do not conflate.
 - Drop "junior" hedging from the targeted resume positioning; lead with the 2 years of production experience.
 
 ## Workflow prompts
