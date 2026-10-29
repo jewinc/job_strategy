@@ -74,7 +74,7 @@ Alternance terminée le 11 septembre 2026. Apprenti au sein de l'équipe Data Sc
 
 ---
 
-### 1.3 Standardiste — ANSM, Paris · *Juin – Août 2021*
+### 1.3 Standardiste — ANSM, Paris · *Août 2021 · 1 mois*
 
 **Situation.** Poste estival au service général de l'Agence nationale de sécurité du médicament et des produits de santé (ANSM), agence publique à environnement régulé.
 
@@ -82,7 +82,7 @@ Alternance terminée le 11 septembre 2026. Apprenti au sein de l'équipe Data Sc
 
 **Action.** Application des protocoles de pharmacovigilance, des exigences de sécurité et des processus d'autorisation/enregistrement ; soutien opérationnel transverse aux 14 directions ; analyse des flux d'appels pour aider à optimiser le service du standard ; gestion du volume d'appels en heure de pointe et des exigences de confidentialité.
 
-**Résultat.** Poste de 3 mois démontrant gestion du stress, communication transverse et discipline de confidentialité — socle de soft skills pertinent pour tout poste impliquant des données régulées ou sensibles.
+**Résultat.** Poste d'un mois démontrant gestion du stress, communication transverse et discipline de confidentialité — socle de soft skills pertinent pour tout poste impliquant des données régulées ou sensibles.
 
 ---
 
@@ -148,7 +148,7 @@ Projet Tableau en solo sur les données ouvertes de `data.gouv.fr`. Trois vues i
 
 ##### f. Dashboard Streamlit — Données financières (NASDAQ) — *solo · code public sur GitHub*
 
-Application Streamlit en solo sur des données Yahoo Finance NASDAQ, deux vues interactives.
+Application Streamlit en solo avec un back-end FastAPI, sur des données Yahoo Finance NASDAQ, deux vues interactives.
 
 ##### g. Chatbot d'assurance santé (IBM Watson Assistant) — *projet de cours en solo*
 
@@ -240,10 +240,10 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 - **Langages de programmation.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Bash / Shell · Solidity (notions).
 - **IA / ML.** PyTorch · scikit-learn · XGBoost · Hugging Face Transformers (BERT, fine-tuning) · NLP · NER · vision par ordinateur (R-CNN) · OCR / parsing PDF · GNN (GCN, GAT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
 - **LLM / Agentique.** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, recherche hybride BM25 + k-NN, ré-ingestion incrémentale) · systèmes multi-agents · prompt engineering · fine-tuning · évaluation LLM (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
-- **Data engineering & plateformes.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · pipelines ETL / ingestion · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (schémas en étoile / flocon) · qualité des données · Dataiku · Tableau · Streamlit.
+- **Data engineering & plateformes.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · pipelines ETL / ingestion · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (schémas en étoile / flocon) · qualité des données · Dataiku · Tableau · Streamlit · FastAPI.
 - **MLOps & DevOps.** MLflow (versioning, monitoring, pipeline de prédiction) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · tests unitaires & couverture · Git / GitHub / GitLab · Linux.
 - **Méthodologies.** Agile · MLOps · Cascade · MVC.
-- **Outils.** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
+- **Outils.** Claude Code (assistant de code IA — usage quotidien pour coder, déboguer, tester et comprendre du code) · JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 - **Création numérique.** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
 
 ---

@@ -42,7 +42,7 @@ Member of a ~30-person Data Science team within the MH Tech division, working in
 - **Fine-tuned a BERT model** for **hierarchical classification** (3 levels, **200+ leaf classes**) of incoming emails (~20K emails/month), reaching **70% accuracy** by the end of the apprenticeship (model still being iterated). Held weekly reviews with the business project owner to adjust targets and report progress; the results helped the project owner detect edge cases in the mail process and quantify errors and process workarounds by employees — something that could not be measured before.
 - Implemented **model versioning, monitoring and a prediction pipeline with MLflow**.
 
-**Stack & tools:** Python · Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · Cohere embeddings · GPT-5.1 · PyTorch · scikit-learn · Transformers (BERT) · R-CNN · OCR · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup.
+**Stack & tools:** Python · Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · Cohere embeddings · GPT-5.1 · PyTorch · scikit-learn · Transformers (BERT) · R-CNN · OCR · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup · Claude Code (AI-assisted coding, debugging, testing and code understanding).
 
 ### Research intern (paid · solo)
 
@@ -54,7 +54,7 @@ Member of a ~30-person Data Science team within the MH Tech division, working in
 
 ### Switchboard operator — General services
 
-**French National Agency for Medicines and Health Products Safety (ANSM), Paris** · *June – August 2021*
+**French National Agency for Medicines and Health Products Safety (ANSM), Paris** · *August 2021 · 1 month*
 
 - Handled around 200 daily inbound and outbound calls, routing them to the agency's 14 directorates; welcomed and oriented visitors.
 - Provided cross-functional operational support across the 14 ANSM directorates; applied pharmacovigilance protocols, security requirements and authorisation/registration processes.
@@ -94,7 +94,7 @@ Work-study program with Malakoff Humanis; final activity report based on the app
 - **Data warehousing** — Star / snowflake schema design and implementation of ETL / ELT jobs.
 - **ETL pipeline & decision-support system** *(duo · IGN database)* — Python ETL → PostgreSQL → decision-support queries.
 - **Dashboard — Crime in France since 2016** *(solo)* — Tableau dashboard on `data.gouv.fr` open data; three interactive views (country, region, town).
-- **Dashboard — Financial data (NASDAQ)** *(solo · code public)* — Streamlit app on Yahoo Finance NASDAQ data, two-view interactive dashboard.
+- **Dashboard — Financial data (NASDAQ)** *(solo · code public)* — Streamlit front-end with a FastAPI back-end on Yahoo Finance NASDAQ data, two-view interactive dashboard.
 
 *Blockchain & Web*
 
@@ -159,13 +159,13 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 
 **LLM / Agentic:** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, hybrid BM25 + k-NN retrieval, incremental re-ingestion) · multi-agent systems · prompt engineering · fine-tuning · LLM evaluation (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
 
-**Data Engineering & Platforms:** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · ETL / ingestion pipelines · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (star / snowflake schemas) · data quality · Dataiku · Tableau · Streamlit.
+**Data Engineering & Platforms:** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · ETL / ingestion pipelines · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (star / snowflake schemas) · data quality · Dataiku · Tableau · Streamlit · FastAPI.
 
 **MLOps & DevOps:** MLflow (versioning, monitoring, prediction pipeline) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · unit tests & coverage · Git / GitHub / GitLab · Linux.
 
 **Methodologies:** Agile · MLOps · Waterfall · MVC.
 
-**Tools:** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
+**Tools:** Claude Code (AI coding assistant — daily use for coding, debugging, testing and code understanding) · JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 
 **Digital creation:** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
 
