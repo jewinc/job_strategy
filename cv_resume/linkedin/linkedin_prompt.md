@@ -51,7 +51,7 @@ You are working on a **single profile**: the one described in the **CANDIDATE CO
 ### Research Intern (paid, solo) — Formal Methods Laboratory (LMF), Université Paris-Saclay · Orsay · Jun – Aug 2024
 - Studied Monero zero-knowledge proofs and built a transaction-path **visualization tool** from a public contaminated-transaction dataset; presented findings to the academic supervisor and an officer from the French gendarmerie's cybercrime unit. No formal report deliverable.
 
-### Switchboard Operator — ANSM (Agence nationale de sécurité du médicament) · Paris · Jun – Aug 2021
+### Switchboard Operator — ANSM (Agence nationale de sécurité du médicament) · Paris · Aug 2021 (1 month)
 - Handled ~200 daily inbound/outbound calls and routed them to the agency's 14 directorates; applied pharmacovigilance protocols and security requirements. Soft-skills baseline: stress management, confidentiality, cross-team communication.
 
 ## Selected academic projects
