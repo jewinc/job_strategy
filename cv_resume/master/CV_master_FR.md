@@ -42,7 +42,7 @@ Membre d'une équipe Data Science d'environ 30 personnes au sein de la direction
 - **Fine-tuning d'un modèle BERT** pour la **classification hiérarchique** (3 niveaux, **plus de 200 classes feuilles**) des courriers entrants (environ 20 K mails par mois), atteignant **70 % de précision** en fin d'alternance (modèle encore en itération). Points hebdomadaires avec le project owner métier pour ajuster la cible et restituer l'avancement ; les résultats lui ont permis de détecter des cas particuliers dans le processus courrier et de quantifier les erreurs et contournements de processus par les collaborateurs — jusque-là non mesurables.
 - Mise en place du **versioning de modèles, du monitoring et d'un pipeline de prédiction avec MLflow**.
 
-**Stack & outils :** Python · Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · embeddings Cohere · GPT-5.1 · PyTorch · scikit-learn · Transformers (BERT) · R-CNN · OCR · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup.
+**Stack & outils :** Python · Dataiku · AWS S3 · AWS OpenSearch · Snowflake · Airflow · Jenkins · Docker / ECR · Kubernetes · GitHub · MLflow · LiteLLM · embeddings Cohere · GPT-5.1 · PyTorch · scikit-learn · Transformers (BERT) · R-CNN · OCR · spaCy · NLTK · PyMuPDF · requests / BeautifulSoup · Claude Code (développement assisté par IA : code, débogage, tests et compréhension du code).
 
 ### Stagiaire de recherche (rémunéré · en solo)
 
@@ -54,7 +54,7 @@ Membre d'une équipe Data Science d'environ 30 personnes au sein de la direction
 
 ### Standardiste — Service général
 
-**Agence nationale de sécurité du médicament et des produits de santé (ANSM), Paris** · *Juin – Août 2021*
+**Agence nationale de sécurité du médicament et des produits de santé (ANSM), Paris** · *Août 2021 · 1 mois*
 
 - Gestion d'environ 200 appels téléphoniques entrants et sortants par jour, avec routage vers les 14 directions de l'agence ; accueil et orientation des visiteurs.
 - Soutien opérationnel transverse aux 14 directions de l'ANSM ; application des protocoles de pharmacovigilance, des exigences de sécurité et des processus d'autorisation et d'enregistrement.
@@ -94,7 +94,7 @@ En alternance chez Malakoff Humanis ; rapport d'activité final basé sur le tra
 - **Data warehousing** — Conception de schémas en étoile / flocon et implémentation de jobs ETL / ELT.
 - **Pipeline ETL & système d'aide à la décision** *(duo · base IGN)* — ETL Python → PostgreSQL → requêtes d'aide à la décision.
 - **Dashboard — Criminalité en France depuis 2016** *(solo)* — Dashboard Tableau sur les données ouvertes de `data.gouv.fr` ; trois vues interactives (national, région, commune).
-- **Dashboard — Données financières (NASDAQ)** *(solo · code public)* — Application Streamlit sur données Yahoo Finance NASDAQ, deux vues interactives.
+- **Dashboard — Données financières (NASDAQ)** *(solo · code public)* — Application Streamlit avec un back-end FastAPI, sur données Yahoo Finance NASDAQ, deux vues interactives.
 
 *Blockchain & Web*
 
@@ -159,13 +159,13 @@ Portfolio : [Projets de fin de module](https://drive.google.com/drive/folders/1c
 
 **LLM / Agentique :** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, recherche hybride BM25 + k-NN, ré-ingestion incrémentale) · systèmes multi-agents · prompt engineering · fine-tuning · évaluation LLM (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
 
-**Data Engineering & Plateformes :** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · pipelines ETL / ingestion · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (schémas en étoile / flocon) · qualité des données · Dataiku · Tableau · Streamlit.
+**Data Engineering & Plateformes :** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · pipelines ETL / ingestion · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (schémas en étoile / flocon) · qualité des données · Dataiku · Tableau · Streamlit · FastAPI.
 
 **MLOps & DevOps :** MLflow (versioning, monitoring, pipeline de prédiction) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · tests unitaires & couverture · Git / GitHub / GitLab · Linux.
 
 **Méthodologies :** Agile · MLOps · Cascade · MVC.
 
-**Outils :** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
+**Outils :** Claude Code (assistant de code IA — usage quotidien pour coder, déboguer, tester et comprendre du code) · JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 
 **Création numérique :** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
 

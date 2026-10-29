@@ -70,7 +70,7 @@ Apprenticeship ended on 11 September 2026. Apprentice in the Data Science team (
 
 ---
 
-### 1.3 Switchboard Operator — ANSM, Paris · *Jun–Aug 2021*
+### 1.3 Switchboard Operator — ANSM, Paris · *Aug 2021 · 1 month*
 
 **Situation.** Summer general-services role at the French National Agency for Medicines and Health Products Safety (ANSM), a regulated public agency.
 
@@ -78,7 +78,7 @@ Apprenticeship ended on 11 September 2026. Apprentice in the Data Science team (
 
 **Action.** Applied pharmacovigilance protocols, security requirements and authorisation/registration processes; provided cross-functional operational support across the 14 directorates; analysed call-flow demand to help optimise switchboard service delivery; managed peak-hour call volume and confidentiality requirements.
 
-**Result.** Three-month role demonstrating stress management, cross-team communication, and confidentiality discipline — baseline soft skills for any role with regulated/sensitive data exposure.
+**Result.** One-month role demonstrating stress management, cross-team communication, and confidentiality discipline — baseline soft skills for any role with regulated/sensitive data exposure.
 
 ---
 
@@ -136,7 +136,7 @@ Solo Tableau project on `data.gouv.fr` open data. Three interactive views (count
 
 ##### f. Streamlit dashboard — Financial data (NASDAQ) — *solo · code public on GitHub*
 
-Solo Streamlit application on Yahoo Finance NASDAQ data, two-view interactive dashboard.
+Solo Streamlit front-end with a FastAPI back-end on Yahoo Finance NASDAQ data, two-view interactive dashboard.
 
 ##### g. Health-Insurance Chatbot (IBM Watson Assistant) — *solo course project*
 
@@ -226,10 +226,10 @@ Portfolio: [End-of-module projects](https://drive.google.com/drive/folders/1cY6N
 - **Programming languages.** Python · SQL · Java · OCaml · Rust · JavaScript / Node.js · C++ / C · HTML / CSS · Processing · Bash / Shell · Solidity (basics).
 - **AI / ML.** PyTorch · scikit-learn · XGBoost · Hugging Face Transformers (BERT, fine-tuning) · NLP · NER · computer vision (R-CNN) · OCR / PDF parsing · GNN (GCN, GAT) · spaCy · scispaCy · NLTK · Gensim · PyMuPDF · NumPy · Pandas · Matplotlib.
 - **LLM / Agentic.** LangChain · LangGraph · LiteLLM · RAG (scraping, chunking, embeddings, hybrid BM25 + k-NN retrieval, incremental re-ingestion) · multi-agent systems · prompt engineering · fine-tuning · LLM evaluation (faithfulness / groundedness) · Snowflake Cortex (Agent, Search, REST API) · IBM Watson Assistant.
-- **Data engineering & platforms.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · ETL / ingestion pipelines · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (star / snowflake schemas) · data quality · Dataiku · Tableau · Streamlit.
+- **Data engineering & platforms.** AWS S3 · AWS OpenSearch · Snowflake · Airflow · Spark · HDFS · PostgreSQL · ETL / ingestion pipelines · web scraping (requests / BeautifulSoup) · OLAP SQL · data warehousing (star / snowflake schemas) · data quality · Dataiku · Tableau · Streamlit · FastAPI.
 - **MLOps & DevOps.** MLflow (versioning, monitoring, prediction pipeline) · Docker / ECR · Jenkins · GitHub Actions · Kubernetes · CI/CD · unit tests & coverage · Git / GitHub / GitLab · Linux.
 - **Methodologies.** Agile · MLOps · Waterfall · MVC.
-- **Tools.** JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
+- **Tools.** Claude Code (AI coding assistant — daily use for coding, debugging, testing and code understanding) · JupyterLab / Jupyter Notebook · Google Colab · VS Code · IntelliJ IDEA.
 - **Digital creation.** Cinema 4D · Unity · Logic Pro · Adobe Illustrator · p5.js.
 
 ---
